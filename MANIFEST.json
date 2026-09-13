@@ -1,0 +1,102 @@
+{
+  "repository": "cura-credibility-evidence",
+  "purpose": "Records artifacts that this repository deliberately does not redistribute, so that a reader can verify they hold the same bytes the analysis used without those bytes being republished here.",
+  "processed": "2026-09-07",
+  "source": {
+    "name": "ClinicalTrials.gov",
+    "publisher": "US National Library of Medicine, National Institutes of Health",
+    "access": "v2 API, complete registry snapshot, 601694 study records",
+    "terms": "https://clinicaltrials.gov/about-site/terms-conditions",
+    "terms_last_updated": "2023-01-31",
+    "conditions_observed": [
+      "Source attributed as ClinicalTrials.gov",
+      "Processing date stated (2026-09-07)",
+      "Modifications described in DATA_CARD.md",
+      "No proprietary rights asserted over any portion of the database"
+    ],
+    "why_record_content_is_not_redistributed": "The Terms state that ClinicalTrials.gov data carry an international copyright outside the United States and its Territories or Possessions, and that some data may be subject to the copyright of third parties. The derived tables below contain registered text authored by study sponsors, so they are not republished."
+  },
+  "not_redistributed": [
+    {
+      "path": "data/processed/aiml_evidence_text.csv",
+      "what": "Free-text extraction for 9,484 AI/ML studies; 28 columns, including up to 2,195 characters of registered text per study.",
+      "origin": "Built by src/02_extract_evidence_text.py from the registry snapshot.",
+      "reason": "Contains sponsor-authored registry text.",
+      "regenerate": "python src/00_scan_corpus.py then src/02_extract_evidence_text.py",
+      "bytes": 39044555,
+      "sha256": "fadf02dd5480c34ad593eb7f03df7046b9cd9a45b8e6a59c74a6a46840725974"
+    },
+    {
+      "path": "data/processed/cura_scores.csv",
+      "what": "Scored corpus, 9,484 rows x 122 columns: CURA scores alongside the structured registry fields they were read from, including brief_title and lead_sponsor.",
+      "origin": "Built by src/03_score_cura.py.",
+      "reason": "Carries verbatim registry fields alongside the derived scores.",
+      "regenerate": "python src/03_score_cura.py",
+      "bytes": 7239104,
+      "sha256": "7b41eae662f133c8484058d0e9b1060fdbfde0c5e606caf9069a3cca86d64605"
+    },
+    {
+      "path": "data/processed/aiml_studies.csv",
+      "what": "Structured registry fields for the 9,484 matched studies; 39 columns.",
+      "origin": "Built by src/00_scan_corpus.py.",
+      "reason": "Verbatim registry field values.",
+      "regenerate": "python src/00_scan_corpus.py",
+      "bytes": 3836552,
+      "sha256": "88a9f527b5ac6c6cf6b69460bb685e193b17c29eb589c351e10d3b3a0e37948e"
+    },
+    {
+      "path": "data/processed/adjudication_sample.csv",
+      "what": "The 200-case stratified sample with a short registered-text excerpt per case.",
+      "origin": "Built by src/06_make_adjudication_sample.py.",
+      "reason": "Contains registry text excerpts. Supplied to the journal as supplementary material for peer review; the labels and scores for the same 200 cases ARE in this repository.",
+      "regenerate": "python src/06_make_adjudication_sample.py",
+      "bytes": 126887,
+      "sha256": "2da344e0184ed2f0f2553dbd3290ad611ff3cce4b1da92b1dca8d55197a415c0"
+    },
+    {
+      "path": "figures/*.png",
+      "what": "Raster copies of the six figures.",
+      "origin": "Written by figures/gen_figures.py and figures/gen_fig6_confound.py.",
+      "reason": "The vector PDFs in figures/ are the canonical copies; the rasters regenerate from the scripts.",
+      "regenerate": "python figures/gen_figures.py && python figures/gen_fig6_confound.py",
+      "files": {
+        "fig1_framework.png": {
+          "bytes": 172151,
+          "sha256": "57e7982e284bbfb03da8f73575e7c13d3fb333b53a56273240342886ab4c1cfa"
+        },
+        "fig2_evidence_prevalence.png": {
+          "bytes": 196597,
+          "sha256": "9459c88cda951f9783f264ee436dd6325792c0a4b2ef2f9c6f3a49942c8d56f7"
+        },
+        "fig3_robustness.png": {
+          "bytes": 164704,
+          "sha256": "9fb89e93c81b2a2c8a498c8c55f64977c70fdf4d0feae5a5e58d8cc2af251271"
+        },
+        "fig4_measurement.png": {
+          "bytes": 119455,
+          "sha256": "363b401bf68378f8b11377f84fc1b9940aeab7f8d837b8f12e4629ce6cf973f3"
+        },
+        "fig5_dimensions_growth.png": {
+          "bytes": 176435,
+          "sha256": "b18bcb8e9d16debee5b6f85be9bd1b15823d994f2ea3c11319135c9193d0b9c8"
+        },
+        "fig6_design_confound.png": {
+          "bytes": 203397,
+          "sha256": "9d1a08de1571d35b67f5ec11b12264bc1a1f7fa8ef247520e9f0332d5caa3794"
+        }
+      }
+    },
+    {
+      "path": "main.tex",
+      "what": "The manuscript source.",
+      "origin": "Author.",
+      "reason": "Under journal review; not posted here.",
+      "regenerate": "n/a",
+      "bytes": 68066,
+      "sha256": "adc4cbe22e51ee71e69bcac60fa944b508f672d2ba9755388a0ba3471a18d4e1"
+    }
+  ],
+  "included_and_verifiable": {
+    "note": "Digests of the two derived corpus tables are also recorded inside results/03_scoring_summary.json, which is in this repository, so the exclusion is independently checkable."
+  }
+}

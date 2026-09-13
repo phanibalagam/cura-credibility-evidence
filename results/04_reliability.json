@@ -1,0 +1,487 @@
+{
+  "H2_discrimination": {
+    "tier_shares": {
+      "low": 0.3484,
+      "moderate": 0.5128,
+      "high": 0.1036,
+      "very_high": 0.0352
+    },
+    "entropy_bits": 1.5331,
+    "normalised_entropy": 0.7665,
+    "largest_tier_share": 0.5128,
+    "supported": true
+  },
+  "H3_channel_agreement": {
+    "influence": {
+      "weighted_kappa": 0.0618,
+      "ci95": [
+        0.0531,
+        0.0709
+      ],
+      "exact_agreement": 0.3161,
+      "n": 9484
+    },
+    "consequence": {
+      "weighted_kappa": 0.0316,
+      "ci95": [
+        0.0223,
+        0.0424
+      ],
+      "exact_agreement": 0.3508,
+      "n": 9484
+    },
+    "D1_data_quality_provenance": {
+      "note": "channel A structurally unobservable; no agreement computable"
+    },
+    "D2_representativeness_bias": {
+      "weighted_kappa": 0.0612,
+      "ci95": [
+        0.0521,
+        0.0707
+      ],
+      "exact_agreement": 0.1984,
+      "n": 9484
+    },
+    "D3_uncertainty_performance": {
+      "note": "channel A structurally unobservable; no agreement computable"
+    },
+    "D4_independent_validation": {
+      "weighted_kappa": -0.0114,
+      "ci95": [
+        -0.0263,
+        0.0025
+      ],
+      "exact_agreement": 0.6137,
+      "n": 9484
+    },
+    "D5_lifecycle_monitoring": {
+      "weighted_kappa": 0.0085,
+      "ci95": [
+        0.0005,
+        0.0169
+      ],
+      "exact_agreement": 0.6987,
+      "n": 9484
+    },
+    "tier": {
+      "weighted_kappa": 0.029,
+      "ci95": [
+        0.0217,
+        0.0363
+      ],
+      "exact_agreement": 0.4058,
+      "n": 9484
+    },
+    "supported": false,
+    "interpretation_note": "measurement-channel agreement, not inter-rater reliability: no human rater and no second rater exists in this design"
+  },
+  "H6_robustness": {
+    "consensus_rule": {
+      "max": {
+        "tier_shares": {
+          "low": 0.3484,
+          "moderate": 0.5128,
+          "high": 0.1036,
+          "very_high": 0.0352
+        },
+        "spearman_rho": 0.2287,
+        "p": 8.482878890955117e-113,
+        "mean_E_by_tier": {
+          "low": 0.1339,
+          "moderate": 0.1616,
+          "high": 0.1958,
+          "very_high": 0.1828
+        },
+        "delta_low_to_top": 0.0489,
+        "delta_low_to_very_high": 0.0489
+      },
+      "min": {
+        "tier_shares": {
+          "low": 0.9591,
+          "moderate": 0.0409,
+          "high": 0.0,
+          "very_high": 0.0
+        },
+        "spearman_rho": 0.0648,
+        "p": 2.738542108021796e-10,
+        "mean_E_by_tier": {
+          "low": 0.0388,
+          "moderate": 0.0595,
+          "high": null,
+          "very_high": null
+        },
+        "delta_low_to_top": 0.0207,
+        "delta_low_to_very_high": null
+      },
+      "mean": {
+        "tier_shares": {
+          "low": 0.7585,
+          "moderate": 0.2257,
+          "high": 0.0157,
+          "very_high": 0.0
+        },
+        "spearman_rho": 0.1415,
+        "p": 1.3940305578160763e-43,
+        "mean_E_by_tier": {
+          "low": 0.0551,
+          "moderate": 0.0759,
+          "high": 0.0949,
+          "very_high": null
+        },
+        "delta_low_to_top": 0.0398,
+        "delta_low_to_very_high": null
+      }
+    },
+    "risk_matrix_form": {
+      "grid": {
+        "shares": {
+          "low": 0.3484,
+          "moderate": 0.5128,
+          "high": 0.1036,
+          "very_high": 0.0352
+        },
+        "spearman_rho": 0.2287,
+        "p": 8.482878890955117e-113,
+        "mean_E_by_tier": {
+          "low": 0.1339,
+          "moderate": 0.1616,
+          "high": 0.1958,
+          "very_high": 0.1828
+        },
+        "delta_low_to_top": 0.0489,
+        "delta_low_to_very_high": 0.0489
+      },
+      "sum": {
+        "shares": {
+          "low": 0.3484,
+          "moderate": 0.2968,
+          "high": 0.3196,
+          "very_high": 0.0352
+        },
+        "spearman_rho": 0.2487,
+        "p": 1.1858267872021841e-133,
+        "mean_E_by_tier": {
+          "low": 0.1339,
+          "moderate": 0.1499,
+          "high": 0.1836,
+          "very_high": 0.1828
+        },
+        "delta_low_to_top": 0.0489,
+        "delta_low_to_very_high": 0.0489
+      },
+      "max": {
+        "shares": {
+          "low": 0.0797,
+          "moderate": 0.5221,
+          "high": 0.3153,
+          "very_high": 0.0829
+        },
+        "spearman_rho": 0.2551,
+        "p": 8.734576662623126e-141,
+        "mean_E_by_tier": {
+          "low": 0.1172,
+          "moderate": 0.1437,
+          "high": 0.1773,
+          "very_high": 0.1926
+        },
+        "delta_low_to_top": 0.0754,
+        "delta_low_to_very_high": 0.0754
+      },
+      "prod": {
+        "shares": {
+          "low": 0.3997,
+          "moderate": 0.4614,
+          "high": 0.1036,
+          "very_high": 0.0352
+        },
+        "spearman_rho": 0.2155,
+        "p": 4.50833078217157e-100,
+        "mean_E_by_tier": {
+          "low": 0.1373,
+          "moderate": 0.1617,
+          "high": 0.1958,
+          "very_high": 0.1828
+        },
+        "delta_low_to_top": 0.0455,
+        "delta_low_to_very_high": 0.0455
+      }
+    },
+    "weight_perturbation": {
+      "kendall_tau_mean": 0.8853,
+      "kendall_tau_p2_5": 0.7935,
+      "delta_low_to_top_mean": 0.0608,
+      "delta_low_to_top_ci95": [
+        0.0217,
+        0.1117
+      ],
+      "delta_low_to_very_high_mean": 0.048,
+      "delta_low_to_very_high_ci95": [
+        0.0134,
+        0.094
+      ],
+      "pct_draws_delta_gt_0.20": 0.0,
+      "pct_draws_delta_vh_gt_0.20": 0.0
+    },
+    "threshold_sweep": {
+      "low_threshold_0.1": {
+        "thresholds": {
+          "low": 0.1,
+          "moderate": 0.3,
+          "high": 0.5,
+          "very_high": 0.7
+        },
+        "sufficient_pct_overall": 23.56,
+        "sufficient_pct_by_tier": {
+          "low": 56.84,
+          "moderate": 7.22,
+          "high": 0.51,
+          "very_high": 0.0
+        }
+      },
+      "low_threshold_0.2": {
+        "thresholds": {
+          "low": 0.2,
+          "moderate": 0.4,
+          "high": 0.6,
+          "very_high": 0.8
+        },
+        "sufficient_pct_overall": 11.1,
+        "sufficient_pct_by_tier": {
+          "low": 27.85,
+          "moderate": 2.67,
+          "high": 0.31,
+          "very_high": 0.0
+        }
+      },
+      "low_threshold_0.3": {
+        "thresholds": {
+          "low": 0.3,
+          "moderate": 0.5,
+          "high": 0.7,
+          "very_high": 0.9
+        },
+        "sufficient_pct_overall": 1.66,
+        "sufficient_pct_by_tier": {
+          "low": 4.42,
+          "moderate": 0.23,
+          "high": 0.0,
+          "very_high": 0.0
+        }
+      },
+      "low_threshold_0.4": {
+        "thresholds": {
+          "low": 0.4,
+          "moderate": 0.6,
+          "high": 0.8,
+          "very_high": 0.95
+        },
+        "sufficient_pct_overall": 0.7,
+        "sufficient_pct_by_tier": {
+          "low": 1.97,
+          "moderate": 0.02,
+          "high": 0.0,
+          "very_high": 0.0
+        }
+      },
+      "low_threshold_0.5": {
+        "thresholds": {
+          "low": 0.5,
+          "moderate": 0.7,
+          "high": 0.9,
+          "very_high": 0.95
+        },
+        "sufficient_pct_overall": 0.05,
+        "sufficient_pct_by_tier": {
+          "low": 0.15,
+          "moderate": 0.0,
+          "high": 0.0,
+          "very_high": 0.0
+        }
+      },
+      "low_threshold_0.6": {
+        "thresholds": {
+          "low": 0.6,
+          "moderate": 0.8,
+          "high": 0.95,
+          "very_high": 0.95
+        },
+        "sufficient_pct_overall": 0.03,
+        "sufficient_pct_by_tier": {
+          "low": 0.09,
+          "moderate": 0.0,
+          "high": 0.0,
+          "very_high": 0.0
+        }
+      },
+      "low_threshold_0.7": {
+        "thresholds": {
+          "low": 0.7,
+          "moderate": 0.9,
+          "high": 0.95,
+          "very_high": 0.95
+        },
+        "sufficient_pct_overall": 0.01,
+        "sufficient_pct_by_tier": {
+          "low": 0.03,
+          "moderate": 0.0,
+          "high": 0.0,
+          "very_high": 0.0
+        }
+      },
+      "low_threshold_0.8": {
+        "thresholds": {
+          "low": 0.8,
+          "moderate": 0.95,
+          "high": 0.95,
+          "very_high": 0.95
+        },
+        "sufficient_pct_overall": 0.01,
+        "sufficient_pct_by_tier": {
+          "low": 0.03,
+          "moderate": 0.0,
+          "high": 0.0,
+          "very_high": 0.0
+        }
+      },
+      "low_threshold_0.9": {
+        "thresholds": {
+          "low": 0.9,
+          "moderate": 0.95,
+          "high": 0.95,
+          "very_high": 0.95
+        },
+        "sufficient_pct_overall": 0.0,
+        "sufficient_pct_by_tier": {
+          "low": 0.0,
+          "moderate": 0.0,
+          "high": 0.0,
+          "very_high": 0.0
+        }
+      }
+    },
+    "flat_threshold_check": {
+      "note": "a flat threshold removes the tautology that the gap must widen when theta rises and E is flat",
+      "sufficient_pct_by_tier": {
+        "flat_0.1": {
+          "low": 56.84,
+          "moderate": 70.51,
+          "high": 85.66,
+          "very_high": 82.04
+        },
+        "flat_0.2": {
+          "low": 27.85,
+          "moderate": 42.69,
+          "high": 61.24,
+          "very_high": 53.59
+        },
+        "flat_0.3": {
+          "low": 4.42,
+          "moderate": 7.22,
+          "high": 11.5,
+          "very_high": 8.38
+        },
+        "flat_0.4": {
+          "low": 1.97,
+          "moderate": 2.67,
+          "high": 3.36,
+          "very_high": 2.99
+        },
+        "flat_0.5": {
+          "low": 0.15,
+          "moderate": 0.23,
+          "high": 0.51,
+          "very_high": 0.3
+        },
+        "flat_0.6": {
+          "low": 0.09,
+          "moderate": 0.02,
+          "high": 0.31,
+          "very_high": 0.0
+        },
+        "flat_0.7": {
+          "low": 0.03,
+          "moderate": 0.0,
+          "high": 0.0,
+          "very_high": 0.0
+        },
+        "flat_0.8": {
+          "low": 0.03,
+          "moderate": 0.0,
+          "high": 0.0,
+          "very_high": 0.0
+        }
+      }
+    },
+    "corpus_strictness": {
+      "any_field": {
+        "n": 9484,
+        "spearman_rho": 0.2287,
+        "p": 8.482878890955117e-113,
+        "mean_E_by_tier": {
+          "low": 0.1339,
+          "moderate": 0.1616,
+          "high": 0.1958,
+          "very_high": 0.1828
+        },
+        "delta_low_to_top": 0.0489,
+        "delta_low_to_very_high": 0.0489
+      },
+      "title_match": {
+        "n": 3702,
+        "spearman_rho": 0.248,
+        "p": 5.378350127671346e-53,
+        "mean_E_by_tier": {
+          "low": 0.1221,
+          "moderate": 0.1425,
+          "high": 0.184,
+          "very_high": 0.1796
+        },
+        "delta_low_to_top": 0.0575,
+        "delta_low_to_very_high": 0.0575
+      },
+      "intervention_match": {
+        "n": 1925,
+        "spearman_rho": 0.2119,
+        "p": 5.521944936926387e-21,
+        "mean_E_by_tier": {
+          "low": 0.1333,
+          "moderate": 0.1584,
+          "high": 0.2047,
+          "very_high": 0.1841
+        },
+        "delta_low_to_top": 0.0508,
+        "delta_low_to_very_high": 0.0508
+      }
+    },
+    "temporal_split": {
+      "pre_2022": {
+        "n": 2771,
+        "spearman_rho": 0.2521,
+        "p": 1.9547064397711776e-41,
+        "mean_E_norm": 0.1613,
+        "mean_E_by_tier": {
+          "low": 0.1337,
+          "moderate": 0.1678,
+          "high": 0.2109,
+          "very_high": 0.1888
+        },
+        "delta_low_to_top": 0.0551,
+        "delta_low_to_very_high": 0.0551
+      },
+      "2022_onward": {
+        "n": 6713,
+        "spearman_rho": 0.219,
+        "p": 1.0925616660055522e-73,
+        "mean_E_norm": 0.1541,
+        "mean_E_by_tier": {
+          "low": 0.1339,
+          "moderate": 0.1591,
+          "high": 0.1892,
+          "very_high": 0.1807
+        },
+        "delta_low_to_top": 0.0468,
+        "delta_low_to_very_high": 0.0468
+      }
+    }
+  }
+}

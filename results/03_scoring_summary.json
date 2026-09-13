@@ -1,0 +1,104 @@
+{
+  "n": 9484,
+  "rubric_version": "1.0.0",
+  "corpus_sha256": {
+    "aiml_studies.csv": "88a9f527b5ac6c6cf6b69460bb685e193b17c29eb589c351e10d3b3a0e37948e",
+    "aiml_evidence_text.csv": "fadf02dd5480c34ad593eb7f03df7046b9cd9a45b8e6a59c74a6a46840725974"
+  },
+  "influence_dist": {
+    "A": {
+      "0": 2666,
+      "1": 4353,
+      "2": 1907,
+      "3": 558
+    },
+    "B": {
+      "0": 8170,
+      "1": 1195,
+      "2": 117,
+      "3": 2
+    },
+    "consensus": {
+      "0": 2467,
+      "1": 4473,
+      "2": 1984,
+      "3": 560
+    }
+  },
+  "consequence_dist": {
+    "A": {
+      "0": 2514,
+      "1": 4907,
+      "2": 1823,
+      "3": 240
+    },
+    "B": {
+      "0": 7252,
+      "1": 2080,
+      "2": 148,
+      "3": 4
+    },
+    "consensus": {
+      "0": 2080,
+      "1": 5231,
+      "2": 1929,
+      "3": 244
+    }
+  },
+  "tier_dist": {
+    "low": 3304,
+    "moderate": 4863,
+    "high": 983,
+    "very_high": 334
+  },
+  "tier_dist_min": {
+    "low": 9096.0,
+    "moderate": 388.0,
+    "high": NaN,
+    "very_high": NaN
+  },
+  "tier_dist_mean": {
+    "low": 7194.0,
+    "moderate": 2141.0,
+    "high": 149.0,
+    "very_high": NaN
+  },
+  "evidence_dim_mean": {
+    "D1_data_quality_provenance": 0.122,
+    "D2_representativeness_bias": 1.042,
+    "D3_uncertainty_performance": 0.2458,
+    "D4_independent_validation": 0.5946,
+    "D5_lifecycle_monitoring": 0.3392
+  },
+  "evidence_dim_pct_zero": {
+    "D1_data_quality_provenance": 88.39,
+    "D2_representativeness_bias": 6.58,
+    "D3_uncertainty_performance": 78.98,
+    "D4_independent_validation": 59.29,
+    "D5_lifecycle_monitoring": 69.31
+  },
+  "E_norm": {
+    "mean": 0.1562,
+    "median": 0.13333333333333333,
+    "p90": 0.26666666666666666,
+    "max": 0.8,
+    "pct_zero": 2.25
+  },
+  "sufficient_pct_overall": 11.1,
+  "sufficient_pct_by_tier": {
+    "low": 27.85,
+    "moderate": 2.67,
+    "high": 0.31,
+    "very_high": 0.0
+  },
+  "mean_E_norm_by_tier": {
+    "low": 0.1339,
+    "moderate": 0.1616,
+    "high": 0.1958,
+    "very_high": 0.1828
+  },
+  "channel_A_unobservable_dims": [
+    "D1_data_quality_provenance",
+    "D3_uncertainty_performance"
+  ]
+}

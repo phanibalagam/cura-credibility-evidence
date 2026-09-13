@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+title: "CURA: measuring credibility evidence for AI in the public clinical-research record"
+message: "If you use this software or data, please cite it as below."
+type: software
+authors:
+  - family-names: Balagam
+    given-names: Phani Kumar
+    orcid: "https://orcid.org/0009-0007-6762-399X"
+repository-code: "https://github.com/phanibalagam/cura-credibility-evidence"
+license: MIT
+keywords:
+  - regulatory science
+  - artificial intelligence
+  - clinical trial registries
+  - measurement validity
+  - reproducibility

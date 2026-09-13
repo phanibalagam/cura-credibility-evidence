@@ -1,0 +1,26 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+The author-generated files in this repository are released under CC BY 4.0:
+https://creativecommons.org/licenses/by/4.0/
+
+They are:
+  - data/processed/adjudication_labels.csv   the author's 200 adjudication labels
+  - data/processed/adjudication_key.csv      the corresponding automated scores
+  - results/*.json                           aggregate result files
+  - src/cura_rubric.json                     the rubric specification
+
+You may share and adapt them for any purpose, including commercially, provided
+you give appropriate credit and indicate if changes were made.
+
+The upstream source is ClinicalTrials.gov, the US National Library of Medicine's
+clinical study registry (https://clinicaltrials.gov), processed 7 September 2026.
+Works produced by the US government are not subject to copyright protection in
+the United States. ClinicalTrials.gov's Terms and Conditions additionally state
+that its data carry an international copyright outside the United States and its
+Territories or Possessions, and that some of its data may be subject to the
+copyright of third parties.
+
+**This repository redistributes no ClinicalTrials.gov record content.** It carries
+study identifiers (NCT numbers), the author's own scores and labels derived from
+the records, and aggregate statistics. The attribution requested above is for that
+derivation, the rubric and the analysis, not for any underlying registry record.

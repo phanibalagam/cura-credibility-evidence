@@ -1,0 +1,431 @@
+{
+  "n": 9484,
+  "n_interventional": 4214,
+  "n_observational": 5270,
+  "caveat": "Study design and completeness are not randomly assigned. These are associations under adjustment, not causal identification.",
+  "A_field_classification": {
+    "rule": "universal iff <50% missing in BOTH designs",
+    "universal_fields": [
+      "is_fda_regulated_drug",
+      "is_fda_regulated_device",
+      "healthy_volunteers",
+      "has_dmc",
+      "countries",
+      "intervention_types",
+      "min_age",
+      "sex"
+    ],
+    "detail": {
+      "is_fda_regulated_drug": {
+        "pct_missing_interventional": 7.5,
+        "pct_missing_observational": 6.5,
+        "class": "universal"
+      },
+      "is_fda_regulated_device": {
+        "pct_missing_interventional": 7.5,
+        "pct_missing_observational": 6.7,
+        "class": "universal"
+      },
+      "healthy_volunteers": {
+        "pct_missing_interventional": 0.1,
+        "pct_missing_observational": 10.2,
+        "class": "universal"
+      },
+      "primary_purpose": {
+        "pct_missing_interventional": 0.4,
+        "pct_missing_observational": 100.0,
+        "class": "design-dependent"
+      },
+      "allocation": {
+        "pct_missing_interventional": 25.9,
+        "pct_missing_observational": 100.0,
+        "class": "design-dependent"
+      },
+      "masking": {
+        "pct_missing_interventional": 0.1,
+        "pct_missing_observational": 100.0,
+        "class": "design-dependent"
+      },
+      "phases": {
+        "pct_missing_interventional": 91.0,
+        "pct_missing_observational": 100.0,
+        "class": "design-dependent"
+      },
+      "has_dmc": {
+        "pct_missing_interventional": 12.5,
+        "pct_missing_observational": 20.1,
+        "class": "universal"
+      },
+      "countries": {
+        "pct_missing_interventional": 9.5,
+        "pct_missing_observational": 11.3,
+        "class": "universal"
+      },
+      "intervention_types": {
+        "pct_missing_interventional": 0.0,
+        "pct_missing_observational": 38.8,
+        "class": "universal"
+      },
+      "min_age": {
+        "pct_missing_interventional": 7.5,
+        "pct_missing_observational": 12.5,
+        "class": "universal"
+      },
+      "sex": {
+        "pct_missing_interventional": 0.0,
+        "pct_missing_observational": 0.0,
+        "class": "universal"
+      }
+    }
+  },
+  "A_completeness_measure": {
+    "fields": [
+      "is_fda_regulated_drug",
+      "is_fda_regulated_device",
+      "healthy_volunteers",
+      "has_dmc",
+      "countries",
+      "intervention_types",
+      "min_age",
+      "sex"
+    ],
+    "mean_overall": 0.9015,
+    "mean_interventional": 0.9444,
+    "mean_observational": 0.8672,
+    "pct_fully_complete": 48.88
+  },
+  "B_zeros_that_are_really_missing_data": {
+    "c1_fda_regulated_article": {
+      "scored_zero": 8846,
+      "of_which_field_missing": 646,
+      "pct_of_zeros_that_are_missing_data": 7.3
+    },
+    "c2_care_bearing_purpose": {
+      "scored_zero": 6909,
+      "of_which_field_missing": 5287,
+      "pct_of_zeros_that_are_missing_data": 76.52
+    },
+    "c3_patient_population": {
+      "scored_zero": 3424,
+      "of_which_field_missing": 543,
+      "pct_of_zeros_that_are_missing_data": 15.86
+    }
+  },
+  "C_estimator": {
+    "declared_criterion": "H1 supported iff rho>0 (CI excluding 0) AND low-to-very_high delta > 0.20",
+    "mean_E_by_tier": {
+      "low": 0.1339,
+      "moderate": 0.1616,
+      "high": 0.1958,
+      "very_high": 0.1828
+    },
+    "PRE_SPECIFIED_low_to_very_high": {
+      "n": 9484,
+      "delta_low_to_very_high": 0.049,
+      "ci95": [
+        0.0393,
+        0.0589
+      ],
+      "ci_excludes_zero": true,
+      "pct_boot_above_0.20": 0.0
+    },
+    "as_implemented_low_to_max_tier": 0.0619,
+    "max_tier_is": "high",
+    "manuscript_reports": 0.062,
+    "note": "the implemented statistic is a maximum over four tier means, positively biased under the null and floored at zero; both biases run against falsification"
+  },
+  "D_tier_is_a_design_proxy": {
+    "crosstab_studytype_x_tier": {
+      "low": {
+        "EXPANDED_ACCESS": 1,
+        "INTERVENTIONAL": 290,
+        "OBSERVATIONAL": 3013
+      },
+      "moderate": {
+        "EXPANDED_ACCESS": 0,
+        "INTERVENTIONAL": 2625,
+        "OBSERVATIONAL": 2238
+      },
+      "high": {
+        "EXPANDED_ACCESS": 0,
+        "INTERVENTIONAL": 965,
+        "OBSERVATIONAL": 18
+      },
+      "very_high": {
+        "EXPANDED_ACCESS": 0,
+        "INTERVENTIONAL": 334,
+        "OBSERVATIONAL": 0
+      }
+    },
+    "pct_of_very_high_that_are_interventional": 100.0,
+    "observational_tiers_present": [
+      "high",
+      "low",
+      "moderate"
+    ],
+    "rho_interventional_tier": 0.6002,
+    "mean_E_interventional": 0.1874,
+    "mean_E_observational": 0.1313
+  },
+  "E_within_study_type": {
+    "interventional": {
+      "n": 4214,
+      "rho_tier_Enorm": {
+        "rho": 0.0378,
+        "ci95": [
+          0.0071,
+          0.067
+        ]
+      },
+      "partial_given_completeness": {
+        "partial_rho": 0.034,
+        "p": 0.027400043931853982,
+        "n": 4214,
+        "ci95": [
+          0.0071,
+          0.064
+        ]
+      },
+      "partial_given_completeness_and_length": {
+        "partial_rho": 0.0649,
+        "p": 2.4853928944354745e-05,
+        "n": 4214,
+        "ci95": [
+          0.0378,
+          0.0936
+        ]
+      },
+      "delta_prespec": {
+        "n": 4214,
+        "delta_low_to_very_high": 0.0031,
+        "ci95": [
+          -0.0104,
+          0.0165
+        ],
+        "ci_excludes_zero": false,
+        "pct_boot_above_0.20": 0.0
+      }
+    },
+    "observational": {
+      "n": 5270,
+      "rho_tier_Enorm": {
+        "rho": 0.0337,
+        "ci95": [
+          0.0063,
+          0.0602
+        ]
+      },
+      "partial_given_completeness": {
+        "partial_rho": 0.0269,
+        "p": 0.05052636508656195,
+        "n": 5270,
+        "ci95": [
+          0.0002,
+          0.0565
+        ]
+      },
+      "partial_given_completeness_and_length": {
+        "partial_rho": 0.0496,
+        "p": 0.00031338066250426796,
+        "n": 5270,
+        "ci95": [
+          0.0221,
+          0.0764
+        ]
+      },
+      "delta_prespec": {
+        "n": 5270,
+        "delta_low_to_very_high": null,
+        "note": "tier absent in this stratum: very_high"
+      }
+    }
+  },
+  "F_adjustment_ladder": {
+    "raw": {
+      "rho": 0.2287,
+      "ci95": [
+        0.2106,
+        0.2474
+      ]
+    },
+    "given_length_only": {
+      "partial_rho": 0.217,
+      "p": 1.883279469095122e-101,
+      "n": 9484,
+      "ci95": [
+        0.1973,
+        0.2378
+      ]
+    },
+    "given_completeness": {
+      "partial_rho": 0.1928,
+      "p": 4.094141151077246e-80,
+      "n": 9484,
+      "ci95": [
+        0.1726,
+        0.2122
+      ]
+    },
+    "given_study_type": {
+      "partial_rho": 0.0356,
+      "p": 0.0005213775569662812,
+      "n": 9484,
+      "ci95": [
+        0.0176,
+        0.0547
+      ]
+    },
+    "given_completeness_and_length": {
+      "partial_rho": 0.1955,
+      "p": 2.401601234500979e-82,
+      "n": 9484,
+      "ci95": [
+        0.1774,
+        0.2146
+      ]
+    },
+    "given_all_three": {
+      "partial_rho": 0.0575,
+      "p": 2.1337060819709633e-08,
+      "n": 9484,
+      "ci95": [
+        0.0382,
+        0.0784
+      ]
+    }
+  },
+  "F_share_removed_pct": {
+    "given_length_only": 5.1,
+    "given_completeness": 15.7,
+    "given_study_type": 84.4,
+    "given_completeness_and_length": 14.5,
+    "given_all_three": 74.9
+  },
+  "G_rescored_missing_excluded": {
+    "rationale": "score each consequence item only where observed, rescale to 0-3",
+    "tier_shift": {
+      "original": {
+        "low": 3304,
+        "moderate": 4863,
+        "high": 983,
+        "very_high": 334
+      },
+      "rescored": {
+        "low": 1857,
+        "moderate": 5747,
+        "high": 1480,
+        "very_high": 400
+      }
+    },
+    "rho_tier_Enorm": {
+      "rho": 0.1754,
+      "ci95": [
+        0.1558,
+        0.194
+      ]
+    },
+    "delta_prespec": {
+      "n": 9484,
+      "delta_low_to_very_high": 0.0545,
+      "ci95": [
+        0.0445,
+        0.0644
+      ],
+      "ci_excludes_zero": true,
+      "pct_boot_above_0.20": 0.0
+    },
+    "within_interventional": {
+      "rho": {
+        "rho": 0.0457,
+        "ci95": [
+          0.0165,
+          0.0748
+        ]
+      },
+      "delta_prespec": {
+        "n": 4214,
+        "delta_low_to_very_high": 0.0071,
+        "ci95": [
+          -0.0066,
+          0.021
+        ],
+        "ci_excludes_zero": false,
+        "pct_boot_above_0.20": 0.0
+      }
+    }
+  },
+  "H_what_survives": {
+    "note": "free-text counts; independent of tier, estimator, combination rule, completeness and design",
+    "prevalence_pct_overall": {
+      "model or algorithm versioning": 0.24,
+      "human oversight or override": 0.39,
+      "model monitoring or drift": 1.27,
+      "bias or fairness assessment": 1.5,
+      "external validation": 3.86,
+      "training-data description": 3.88,
+      "any expression of uncertainty": 3.48,
+      "discrimination metric": 16.54
+    },
+    "prevalence_pct_interventional_only": {
+      "model or algorithm versioning": 0.09,
+      "human oversight or override": 0.74,
+      "model monitoring or drift": 1.33,
+      "bias or fairness assessment": 2.35,
+      "external validation": 0.93,
+      "training-data description": 1.12,
+      "any expression of uncertainty": 3.99,
+      "discrimination metric": 7.69
+    },
+    "pct_with_zero_evidence_terms": 39.13,
+    "rho_completeness_vs_n_evidence_terms": -0.0204
+  },
+  "I_qa": {
+    "I1_null_is_precise_not_underpowered": {
+      "n": 4214,
+      "delta": 0.0031,
+      "ci95": [
+        -0.0104,
+        0.0165
+      ],
+      "ci_width": 0.0269,
+      "rules_out_effects_above": 0.0165,
+      "prespecified_threshold": 0.2,
+      "reading": "a tight interval around zero, not an absence of evidence"
+    },
+    "I2_overadjustment_check": {
+      "question": "study_type is encoded by CURA influence item i3, so is controlling for it over-adjustment?",
+      "rho_design_tier_with_i3": 0.6002,
+      "rho_design_tier_without_i3": 0.3399,
+      "delta_prespec_i3_removed_all": 0.0393,
+      "delta_prespec_i3_removed_interventional": 0.0056,
+      "reading": "design still predicts tier with the design item deleted, so the link is not purely definitional; and the within-design null holds either way"
+    },
+    "I3_low_to_high_in_both_strata": {
+      "interventional": {
+        "n": 4214,
+        "n_high_tier": 965,
+        "delta_low_to_high": 0.0159,
+        "ci95": [
+          0.0053,
+          0.0268
+        ]
+      },
+      "observational": {
+        "n": 5270,
+        "n_high_tier": 18,
+        "delta_low_to_high": 0.0706,
+        "ci95": [
+          0.0096,
+          0.1434
+        ]
+      }
+    },
+    "I4_simpsons_paradox": {
+      "pooled_rho": 0.2287,
+      "interventional_rho": 0.0378,
+      "observational_rho": 0.0337,
+      "reading": "the pooled association is between strata; it nearly vanishes within either one"
+    },
+    "multiple_comparisons_note": "Many tests are reported. The primary contrast -- the pre-specified low-to-very_high delta within interventional studies -- was fixed by design logic before these results were seen: it is the only stratum in which all scoring fields apply and all four tiers exist."
+  }
+}

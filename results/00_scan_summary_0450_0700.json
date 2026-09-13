@@ -1,0 +1,7 @@
+{
+  "shards": 152,
+  "studies_scanned": 151694,
+  "studies_matched": 2423,
+  "match_rate": 0.01597,
+  "pattern": "\\b(artificial intelligence|machine learning|deep learning|neural network|convolutional neural|recurrent neural|random forest|gradient boosting|support vector machine|natural language processing|large language model|computer[- ]aided detection|computer[- ]aided diagnosis|radiomics|predictive algorithm|prediction model|clinical decision support|reinforcement learning|transformer model|foundation model)\\b"
+}

@@ -1,0 +1,155 @@
+{
+  "C1_scope_subsets": {
+    "full_corpus": {
+      "label": "all 9,484",
+      "n": 9484,
+      "n_by_tier": {
+        "low": 3304,
+        "moderate": 4863,
+        "high": 983,
+        "very_high": 334
+      },
+      "spearman_rho": 0.2287,
+      "p": 8.482878890955117e-113,
+      "mean_E_by_tier": {
+        "low": 0.1339,
+        "moderate": 0.1616,
+        "high": 0.1958,
+        "very_high": 0.1828
+      },
+      "delta_low_to_top": 0.0619,
+      "mean_E_norm": 0.1562
+    },
+    "fda_regulated_drug": {
+      "label": "FDA-regulated drug = True",
+      "n": 139,
+      "n_by_tier": {
+        "low": 4,
+        "moderate": 54,
+        "high": 66,
+        "very_high": 15
+      },
+      "spearman_rho": 0.341,
+      "p": 3.983462423848645e-05,
+      "mean_E_by_tier": {
+        "low": 0.1333,
+        "moderate": 0.1481,
+        "high": 0.2242,
+        "very_high": 0.1911
+      },
+      "delta_low_to_top": 0.0909,
+      "mean_E_norm": 0.1885
+    },
+    "fda_regulated_device": {
+      "label": "FDA-regulated device = True",
+      "n": 511,
+      "n_by_tier": {
+        "low": 37,
+        "moderate": 231,
+        "high": 137,
+        "very_high": 106
+      },
+      "spearman_rho": 0.2804,
+      "p": 1.1010095396067887e-10,
+      "mean_E_by_tier": {
+        "low": 0.1261,
+        "moderate": 0.1449,
+        "high": 0.1927,
+        "very_high": 0.1969
+      },
+      "delta_low_to_top": 0.0708,
+      "mean_E_norm": 0.1671
+    },
+    "fda_regulated_either": {
+      "label": "either flag = True",
+      "n": 638,
+      "n_by_tier": {
+        "low": 41,
+        "moderate": 279,
+        "high": 199,
+        "very_high": 119
+      },
+      "spearman_rho": 0.2903,
+      "p": 7.451755087804597e-14,
+      "mean_E_by_tier": {
+        "low": 0.1268,
+        "moderate": 0.146,
+        "high": 0.203,
+        "very_high": 0.1955
+      },
+      "delta_low_to_top": 0.0762,
+      "mean_E_norm": 0.1718
+    },
+    "interventional_with_phase": {
+      "label": "interventional with a declared phase (drug/biologic development)",
+      "n": 379,
+      "n_by_tier": {
+        "low": 9,
+        "moderate": 213,
+        "high": 127,
+        "very_high": 30
+      },
+      "spearman_rho": -0.0097,
+      "p": 0.8511005560719188,
+      "mean_E_by_tier": {
+        "low": 0.2222,
+        "moderate": 0.2009,
+        "high": 0.2031,
+        "very_high": 0.1867
+      },
+      "delta_low_to_top": 0.0,
+      "mean_E_norm": 0.2011
+    },
+    "industry_sponsored": {
+      "label": "industry-sponsored",
+      "n": 787,
+      "n_by_tier": {
+        "low": 295,
+        "moderate": 373,
+        "high": 81,
+        "very_high": 38
+      },
+      "spearman_rho": 0.2514,
+      "p": 8.181990847586723e-13,
+      "mean_E_by_tier": {
+        "low": 0.1336,
+        "moderate": 0.156,
+        "high": 0.2206,
+        "very_high": 0.214
+      },
+      "delta_low_to_top": 0.087,
+      "mean_E_norm": 0.1571
+    },
+    "note": "FDA's draft guidance covers drug and biological products. Only 139 of 9484 corpus studies carry the FDA-regulated-drug flag (1.5%). This is the corpus's most serious scope limitation."
+  },
+  "C2_record_length": {
+    "spearman_rho_tier_vs_logchars": 0.0742,
+    "spearman_rho_E_vs_logchars": 0.3065,
+    "partial_spearman_tier_E_given_logchars": 0.217,
+    "partial_p": 1.883279469095122e-101,
+    "ols_E_on_tier_and_logchars": {
+      "coef_tier": 0.02221,
+      "se_tier": 0.00116,
+      "ci95_tier": [
+        0.01995,
+        0.02448
+      ],
+      "coef_logchars": 0.08944,
+      "r2": 0.1396,
+      "implied_delta_over_3_tiers": 0.0666
+    },
+    "ols_E_on_tier_only": {
+      "coef_tier": 0.02448,
+      "implied_delta_over_3_tiers": 0.0734,
+      "r2": 0.0408
+    },
+    "interpretation": "record length is a common cause of both scores; the tier coefficient after conditioning on it is the length-adjusted gradient"
+  },
+  "C3_permutation_baseline": {
+    "observed_rho": 0.2287,
+    "permuted_rho_mean": -0.00018,
+    "permuted_rho_p97_5": 0.0199,
+    "p_permutation": 0.0004997501249375312,
+    "verdict": "observed association exceeds the marginal-only baseline"
+  }
+}

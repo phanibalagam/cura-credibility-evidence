@@ -1,0 +1,93 @@
+{
+  "name": "CURA",
+  "long_name": "Context-of-Use Risk Assessment rubric",
+  "version": "1.0.0",
+  "anchor": {
+    "source": "FDA draft guidance, Considerations for the Use of Artificial Intelligence To Support Regulatory Decision-Making for Drug and Biological Products, January 2025, docket FDA-2024-D-4689 (draft as of 2026-09-07)",
+    "steps": [
+      "Define the question of interest that will be addressed by the AI model",
+      "Define the COU for the AI model",
+      "Assess the AI model risk",
+      "Develop a plan to establish the credibility of AI model output within the COU",
+      "Execute the plan",
+      "Document the results of the credibility assessment plan and discuss deviations from the plan",
+      "Determine the adequacy of the AI model for the COU"
+    ],
+    "risk_axes": {
+      "model_influence": "the contribution of the evidence derived from the AI model relative to other evidence addressing the question of interest",
+      "decision_consequence": "the significance of an adverse outcome resulting from an incorrect decision concerning the question of interest"
+    }
+  },
+  "axes": {
+    "influence": {"range": [0, 3], "anchors": {
+      "0": "AI output is one of several corroborating inputs and is not acted upon directly",
+      "1": "AI output is assistive: a human reviews it and may override before any action",
+      "2": "AI output is the primary basis for an action, with human oversight retained",
+      "3": "AI output is the sole or dominant basis for the decision; no independent corroboration"}},
+    "consequence": {"range": [0, 3], "anchors": {
+      "0": "An incorrect decision has no effect on patient safety, product quality, or the reliability of results",
+      "1": "An incorrect decision affects the reliability of results or operational quality only",
+      "2": "An incorrect decision could lead to inappropriate care or an out-of-specification product reaching a decision point",
+      "3": "An incorrect decision could directly cause patient harm or release of unsafe product"}}
+  },
+  "risk_matrix": {
+    "comment": "rows = influence 0..3, cols = consequence 0..3; monotone non-decreasing in both axes",
+    "grid": [["low","low","moderate","moderate"],
+             ["low","moderate","moderate","high"],
+             ["moderate","moderate","high","very_high"],
+             ["moderate","high","very_high","very_high"]]
+  },
+  "evidence_dimensions": {
+    "D1_data_quality_provenance": {"range": [0,3], "definition": "Is the provenance, composition and curation of the data behind the model stated and auditable?"},
+    "D2_representativeness_bias": {"range": [0,3], "definition": "Is the population the model was built on characterised, and is performance examined across relevant subgroups?"},
+    "D3_uncertainty_performance": {"range": [0,3], "definition": "Is model performance characterised with discrimination, calibration and an expression of uncertainty?"},
+    "D4_independent_validation": {"range": [0,3], "definition": "Has the model been evaluated on data independent of its development, against a declared comparator and a pre-specified analysis?"},
+    "D5_lifecycle_monitoring": {"range": [0,3], "definition": "Is the deployed model version controlled, monitored for drift, and subject to human oversight?"}
+  },
+  "sufficiency_thresholds": {
+    "comment": "minimum normalised evidence score E in [0,1] required for the assessed risk tier; declared a priori, swept in sensitivity analysis",
+    "low": 0.20, "moderate": 0.40, "high": 0.60, "very_high": 0.80
+  },
+  "channel_a_structured": {
+    "comment": "Registry metadata only. D1 and D3 are declared UNOBSERVABLE in this channel: no ClinicalTrials.gov field carries training-data provenance or model performance characterisation.",
+    "influence": [
+      {"item": "i1", "field": "match_in_intervention", "rule": "== True", "points": 1, "reads": "the AI is a registered intervention rather than a background mention"},
+      {"item": "i2", "field": "match_in_title", "rule": "== True", "points": 1, "reads": "the study is about the AI, not merely uses one"},
+      {"item": "i3", "field": "study_type", "rule": "== INTERVENTIONAL", "points": 1, "reads": "the model output is acted upon prospectively"}
+    ],
+    "consequence": [
+      {"item": "c1", "field": "is_fda_regulated_drug|is_fda_regulated_device", "rule": "either == True", "points": 1, "reads": "an FDA-regulated article is in scope"},
+      {"item": "c2", "field": "primary_purpose", "rule": "in {TREATMENT, DIAGNOSTIC, SCREENING, PREVENTION}", "points": 1, "reads": "the decision bears on patient care"},
+      {"item": "c3", "field": "healthy_volunteers", "rule": "== False", "points": 1, "reads": "the population is patients, not healthy volunteers"}
+    ],
+    "evidence": {
+      "D1_data_quality_provenance": "UNOBSERVABLE",
+      "D2_representativeness_bias": [
+        {"item": "a_d2_1", "field": "countries", "rule": "more than one country", "points": 1},
+        {"item": "a_d2_2", "field": "n_locations", "rule": ">= 5", "points": 1},
+        {"item": "a_d2_3", "field": "sex", "rule": "== ALL", "points": 1}],
+      "D3_uncertainty_performance": "UNOBSERVABLE",
+      "D4_independent_validation": [
+        {"item": "a_d4_1", "field": "allocation", "rule": "== RANDOMIZED", "points": 1},
+        {"item": "a_d4_2", "field": "masking", "rule": "!= NONE and present", "points": 1},
+        {"item": "a_d4_3", "field": "has_results", "rule": "== True", "points": 1}],
+      "D5_lifecycle_monitoring": [
+        {"item": "a_d5_1", "field": "has_dmc", "rule": "== True", "points": 1},
+        {"item": "a_d5_2", "field": "n_result_refs", "rule": ">= 1", "points": 1},
+        {"item": "a_d5_3", "field": "overall_status", "rule": "in {ACTIVE_NOT_RECRUITING, COMPLETED} with results", "points": 1}]
+    }
+  },
+  "channel_b_text": {
+    "comment": "Free-text lexicon over title, summaries, keywords, interventions and outcome measures. A mention counts without regard to quality, so all prevalences are upper bounds.",
+    "influence": [{"if": "inf_sole_basis", "set": 3}, {"if": "inf_autonomous", "set": 2}, {"if": "inf_assistive", "set": 1}, {"else": 0}],
+    "consequence": [{"count_of": ["con_treatment", "con_safety", "con_triage"], "cap": 3}],
+    "evidence": {
+      "D1_data_quality_provenance": ["d1_training_data", "d1_data_source", "d1_data_quality"],
+      "D2_representativeness_bias": ["d2_external_pop", "d2_subgroup", "d2_bias"],
+      "D3_uncertainty_performance": ["d3_discrimination", "d3_calibration", "d3_uncertainty"],
+      "D4_independent_validation": ["d4_external_val", "d4_prospective", "d4_comparator", "d4_prereg_analysis"],
+      "D5_lifecycle_monitoring": ["d5_monitoring", "d5_version", "d5_oversight"]
+    }
+  },
+  "consensus_rule": "For the combined score, each axis and dimension takes the maximum of the two channels, on the principle that evidence observed in either channel is evidence present in the public record. The minimum and mean are reported as sensitivity variants."
+}

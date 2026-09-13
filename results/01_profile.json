@@ -1,0 +1,197 @@
+{
+  "n_rows": 9484,
+  "n_unique_nct": 9484,
+  "chunk_files": [
+    "aiml_0000_0150.csv",
+    "aiml_0150_0300.csv",
+    "aiml_0300_0450.csv",
+    "aiml_0450_0700.csv"
+  ],
+  "first_post_date_range": [
+    "1999-11-04",
+    "2026-09-04"
+  ],
+  "start_date_range": [
+    "1979-01-01",
+    "2030-01-01"
+  ],
+  "missingness_pct": {
+    "nct_id": 0.0,
+    "brief_title": 0.0,
+    "overall_status": 0.0,
+    "study_type": 0.0,
+    "phases": 55.6,
+    "allocation": 55.64,
+    "masking": 55.63,
+    "primary_purpose": 55.75,
+    "intervention_model": 55.64,
+    "enrollment": 0.15,
+    "enrollment_type": 0.24,
+    "start_date": 0.08,
+    "completion_date": 0.36,
+    "first_post_date": 0.0,
+    "last_update_date": 0.0,
+    "lead_sponsor": 0.0,
+    "sponsor_class": 0.0,
+    "n_conditions": 0.0,
+    "conditions": 0.0,
+    "intervention_types": 21.56,
+    "n_locations": 0.0,
+    "countries": 10.52,
+    "has_results": 0.0,
+    "has_dmc": 16.72,
+    "is_fda_regulated_drug": 6.91,
+    "is_fda_regulated_device": 7.05,
+    "is_us_export": 84.25,
+    "oversight_has_dmc": 16.72,
+    "n_references": 0.0,
+    "n_result_refs": 0.0,
+    "text_len": 0.0,
+    "matched_terms": 0.0,
+    "match_in_title": 0.0,
+    "match_in_intervention": 0.0,
+    "n_primary_outcomes": 0.0,
+    "n_secondary_outcomes": 0.0,
+    "healthy_volunteers": 5.73,
+    "min_age": 10.27,
+    "sex": 0.03
+  },
+  "study_type": {
+    "OBSERVATIONAL": 5269,
+    "INTERVENTIONAL": 4214,
+    "EXPANDED_ACCESS": 1
+  },
+  "overall_status": {
+    "COMPLETED": 3128,
+    "RECRUITING": 2139,
+    "UNKNOWN": 1884,
+    "NOT_YET_RECRUITING": 1247,
+    "ACTIVE_NOT_RECRUITING": 532,
+    "ENROLLING_BY_INVITATION": 252,
+    "TERMINATED": 139,
+    "WITHDRAWN": 138,
+    "SUSPENDED": 24,
+    "NO_LONGER_AVAILABLE": 1
+  },
+  "phases": {
+    "NaN": 5273,
+    "NA": 3832,
+    "PHASE2": 136,
+    "PHASE4": 80,
+    "PHASE3": 65,
+    "PHASE1": 29,
+    "PHASE1|PHASE2": 27,
+    "EARLY_PHASE1": 26,
+    "PHASE2|PHASE3": 16
+  },
+  "sponsor_class": {
+    "OTHER": 8258,
+    "INDUSTRY": 787,
+    "OTHER_GOV": 303,
+    "FED": 53,
+    "NETWORK": 40,
+    "NIH": 39,
+    "UNKNOWN": 3,
+    "INDIV": 1
+  },
+  "primary_purpose": {
+    "NaN": 5287,
+    "TREATMENT": 1164,
+    "DIAGNOSTIC": 758,
+    "HEALTH_SERVICES_RESEARCH": 524,
+    "OTHER": 503,
+    "PREVENTION": 413,
+    "SUPPORTIVE_CARE": 351,
+    "SCREENING": 240,
+    "BASIC_SCIENCE": 193,
+    "DEVICE_FEASIBILITY": 50,
+    "ECT": 1
+  },
+  "is_fda_regulated_drug": {
+    "False": 8690,
+    "NaN": 655,
+    "True": 139
+  },
+  "is_fda_regulated_device": {
+    "False": 8304,
+    "NaN": 669,
+    "True": 511
+  },
+  "has_results": {
+    "False": 9157,
+    "True": 327
+  },
+  "has_dmc": {
+    "False": 5663,
+    "True": 2235,
+    "NaN": 1586
+  },
+  "match_in_title": {
+    "False": 5782,
+    "True": 3702
+  },
+  "match_in_intervention": {
+    "False": 7559,
+    "True": 1925
+  },
+  "top_matched_terms": {
+    "artificial intelligence": 4490,
+    "machine learning": 2784,
+    "prediction model": 1460,
+    "deep learning": 1151,
+    "clinical decision support": 944,
+    "radiomics": 488,
+    "neural network": 444,
+    "convolutional neural": 254,
+    "random forest": 219,
+    "large language model": 212,
+    "natural language processing": 200,
+    "reinforcement learning": 141,
+    "predictive algorithm": 105,
+    "support vector machine": 97,
+    "computer-aided detection": 95,
+    "computer-aided diagnosis": 87,
+    "gradient boosting": 65,
+    "computer aided detection": 45,
+    "computer aided diagnosis": 32,
+    "recurrent neural": 25
+  },
+  "posts_per_year": {
+    "1999": 1,
+    "2001": 3,
+    "2002": 1,
+    "2003": 3,
+    "2005": 17,
+    "2006": 14,
+    "2007": 17,
+    "2008": 28,
+    "2009": 32,
+    "2010": 32,
+    "2011": 46,
+    "2012": 39,
+    "2013": 68,
+    "2014": 64,
+    "2015": 89,
+    "2016": 123,
+    "2017": 180,
+    "2018": 269,
+    "2019": 389,
+    "2020": 596,
+    "2021": 760,
+    "2022": 983,
+    "2023": 1062,
+    "2024": 1441,
+    "2025": 1585,
+    "2026": 1642
+  },
+  "enrollment_describe": {
+    "count": 9470.0,
+    "mean": 21799.15,
+    "std": 577637.47,
+    "min": 0.0,
+    "25%": 80.0,
+    "50%": 241.5,
+    "75%": 1000.0,
+    "max": 50000000.0
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "H1_risk_proportionality": {
+    "spearman_rho": 0.2287,
+    "spearman_p": 8.482878890955117e-113,
+    "kruskal_H": 513.771,
+    "kruskal_p": 4.9452842681876904e-111,
+    "epsilon_squared": 0.05388,
+    "jonckheere_z": 21.602,
+    "jonckheere_p": 0.0,
+    "jonckheere_direction": "positive z = evidence increases with tier",
+    "mean_E_norm_by_tier": {
+      "low": 0.1339,
+      "moderate": 0.1616,
+      "high": 0.1958,
+      "very_high": 0.1828
+    },
+    "sd_E_norm_by_tier": {
+      "low": 0.0848,
+      "moderate": 0.091,
+      "high": 0.0911,
+      "very_high": 0.0881
+    },
+    "n_by_tier": {
+      "low": 3304,
+      "moderate": 4863,
+      "high": 983,
+      "very_high": 334
+    },
+    "delta_low_to_very_high": 0.049,
+    "delta_ci95": [
+      0.0393,
+      0.0587
+    ],
+    "secondary_delta_low_to_max_tier": 0.0619,
+    "secondary_delta_low_to_max_tier_ci95": [
+      0.0555,
+      0.0685
+    ],
+    "estimator_note": "delta_low_to_very_high is the pre-specified contrast used for the H1 decision; the low-to-max-tier variant is reported for transparency only.",
+    "monotone_across_all_four_tiers": false,
+    "prespecified_criterion": "rho>0 with CI excluding 0 AND delta > 0.20",
+    "criterion_rho_met": true,
+    "criterion_delta_met": false,
+    "SUPPORTED": false
+  },
+  "H5_added_information": {
+    "B1_eu_ai_act_style": {
+      "n_levels": 3,
+      "H_comparator_bits": 1.228,
+      "H_CURA_bits": 1.9246,
+      "mutual_information_bits": 0.3015,
+      "H_CURA_given_comparator_bits": 1.623,
+      "normalised_MI": 0.1961,
+      "adjusted_rand_index": 0.0712,
+      "criterion_H_ge_0.30": true
+    },
+    "B2_risk_tier_only": {
+      "n_levels": 4,
+      "H_comparator_bits": 1.5331,
+      "H_CURA_bits": 1.9246,
+      "mutual_information_bits": 1.5331,
+      "H_CURA_given_comparator_bits": 0.3915,
+      "normalised_MI": 0.8925,
+      "adjusted_rand_index": 0.8657,
+      "criterion_H_ge_0.30": true
+    },
+    "B3_reporting_count_only": {
+      "n_levels": 4,
+      "H_comparator_bits": 2.0,
+      "H_CURA_bits": 1.9246,
+      "mutual_information_bits": 0.0763,
+      "H_CURA_given_comparator_bits": 1.8483,
+      "normalised_MI": 0.0389,
+      "adjusted_rand_index": 0.0179,
+      "criterion_H_ge_0.30": true
+    },
+    "SUPPORTED": true,
+    "crosstab_B1_vs_tier": {
+      "low": {
+        "high": 37,
+        "limited": 105,
+        "minimal": 3162
+      },
+      "moderate": {
+        "high": 1374,
+        "limited": 672,
+        "minimal": 2817
+      },
+      "high": {
+        "high": 733,
+        "limited": 95,
+        "minimal": 155
+      },
+      "very_high": {
+        "high": 307,
+        "limited": 9,
+        "minimal": 18
+      }
+    }
+  },
+  "construct_validity_known_groups": {
+    "phase": {
+      "crosstab": {
+        "low": {
+          "NONE": 3295,
+          "PHASED": 9
+        },
+        "moderate": {
+          "NONE": 4650,
+          "PHASED": 213
+        },
+        "high": {
+          "NONE": 856,
+          "PHASED": 127
+        },
+        "very_high": {
+          "NONE": 304,
+          "PHASED": 30
+        }
+      },
+      "chi2": 346.95,
+      "p": 6.814905701539392e-75,
+      "cramers_v": 0.1352,
+      "mean_tier_ord": {
+        "NONE": 0.799,
+        "PHASED": 1.47
+      }
+    },
+    "sponsor_class": {
+      "crosstab": {
+        "low": {
+          "FED": 16,
+          "INDUSTRY": 295,
+          "OTHER": 2836,
+          "OTHER_GOV": 119
+        },
+        "moderate": {
+          "FED": 34,
+          "INDUSTRY": 373,
+          "OTHER": 4264,
+          "OTHER_GOV": 160
+        },
+        "high": {
+          "FED": 3,
+          "INDUSTRY": 81,
+          "OTHER": 870,
+          "OTHER_GOV": 18
+        },
+        "very_high": {
+          "FED": 0,
+          "INDUSTRY": 38,
+          "OTHER": 288,
+          "OTHER_GOV": 6
+        }
+      },
+      "chi2": 23.36,
+      "p": 0.005437888133749507,
+      "mean_tier_ord": {
+        "OTHER": 0.832,
+        "INDUSTRY": 0.825,
+        "OTHER_GOV": 0.706,
+        "FED": 0.755
+      }
+    },
+    "enrollment": {
+      "spearman_rho_tier": -0.1203,
+      "p": 7.523131352906741e-32,
+      "median_by_tier": {
+        "low": 308.0,
+        "moderate": 210.0,
+        "high": 150.0,
+        "very_high": 216.0
+      },
+      "note": "winsorised at p99; raw max 50,000,000 is an unvalidated registry value"
+    }
+  },
+  "scale_structure": {
+    "cronbach_alpha": 0.2269,
+    "interpretation": "CURA's evidence layer is a FORMATIVE index, not a reflective scale: the five dimensions are distinct evidentiary obligations, not interchangeable indicators of one latent trait. A low alpha is the expected and correct result here; a high alpha would indicate redundant dimensions.",
+    "spearman_inter_dimension": {
+      "D1_data_quality_provenance": {
+        "D1_data_quality_provenance": 1.0,
+        "D2_representativeness_bias": 0.028,
+        "D3_uncertainty_performance": 0.11,
+        "D4_independent_validation": 0.087,
+        "D5_lifecycle_monitoring": 0.051
+      },
+      "D2_representativeness_bias": {
+        "D1_data_quality_provenance": 0.028,
+        "D2_representativeness_bias": 1.0,
+        "D3_uncertainty_performance": 0.035,
+        "D4_independent_validation": 0.045,
+        "D5_lifecycle_monitoring": 0.046
+      },
+      "D3_uncertainty_performance": {
+        "D1_data_quality_provenance": 0.11,
+        "D2_representativeness_bias": 0.035,
+        "D3_uncertainty_performance": 1.0,
+        "D4_independent_validation": -0.057,
+        "D5_lifecycle_monitoring": 0.019
+      },
+      "D4_independent_validation": {
+        "D1_data_quality_provenance": 0.087,
+        "D2_representativeness_bias": 0.045,
+        "D3_uncertainty_performance": -0.057,
+        "D4_independent_validation": 1.0,
+        "D5_lifecycle_monitoring": 0.166
+      },
+      "D5_lifecycle_monitoring": {
+        "D1_data_quality_provenance": 0.051,
+        "D2_representativeness_bias": 0.046,
+        "D3_uncertainty_performance": 0.019,
+        "D4_independent_validation": 0.166,
+        "D5_lifecycle_monitoring": 1.0
+      }
+    },
+    "max_abs_offdiagonal_rho": 0.1658,
+    "eigenvalues": [
+      1.2659,
+      1.1206,
+      0.9831,
+      0.858,
+      0.7725
+    ],
+    "variance_explained_pc1": 0.2532
+  }
+}

@@ -1,0 +1,28 @@
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Derived corpus tables and intermediates: not redistributed (see MANIFEST.json)
+data/processed/aiml_studies.csv
+data/processed/aiml_evidence_text.csv
+data/processed/cura_scores.csv
+data/processed/adjudication_sample.csv
+data/processed/chunks/
+data/processed/chunks_text/
+data/raw/
+
+# Manuscript sources: under journal review, not posted here
+main.tex
+main.pdf
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+selfcheck/

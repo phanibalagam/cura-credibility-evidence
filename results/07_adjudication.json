@@ -1,0 +1,328 @@
+{
+  "design_note": "single automated annotator, blind to automated scores, working from each study's registered text and the rubric anchors; not human expert review, not inter-rater reliability",
+  "sample": "stratified by automated tier, 50 per tier, seed 20260907",
+  "influence": {
+    "metric": "influence",
+    "n": 200,
+    "exact_agreement": 0.31,
+    "exact_ci95": [
+      0.25,
+      0.3772
+    ],
+    "within_one_level": 0.86,
+    "quadratic_weighted_kappa": 0.4009,
+    "kappa_ci95": [
+      0.307,
+      0.4863
+    ],
+    "mean_signed_error_auto_minus_adj": 0.35,
+    "confusion": [
+      [
+        13,
+        21,
+        10,
+        0
+      ],
+      [
+        11,
+        27,
+        20,
+        9
+      ],
+      [
+        7,
+        14,
+        22,
+        39
+      ],
+      [
+        0,
+        2,
+        5,
+        0
+      ]
+    ]
+  },
+  "consequence": {
+    "metric": "consequence",
+    "n": 200,
+    "exact_agreement": 0.305,
+    "exact_ci95": [
+      0.2454,
+      0.372
+    ],
+    "within_one_level": 0.825,
+    "quadratic_weighted_kappa": 0.2389,
+    "kappa_ci95": [
+      0.1136,
+      0.3539
+    ],
+    "mean_signed_error_auto_minus_adj": -0.38,
+    "confusion": [
+      [
+        6,
+        5,
+        0,
+        0
+      ],
+      [
+        10,
+        15,
+        24,
+        5
+      ],
+      [
+        14,
+        33,
+        28,
+        12
+      ],
+      [
+        4,
+        12,
+        20,
+        12
+      ]
+    ]
+  },
+  "tier": {
+    "metric": "tier",
+    "n": 200,
+    "exact_agreement": 0.29,
+    "exact_ci95": [
+      0.2315,
+      0.3564
+    ],
+    "within_one_level": 0.815,
+    "quadratic_weighted_kappa": 0.3767,
+    "kappa_ci95": [
+      0.2598,
+      0.4807
+    ],
+    "mean_signed_error_auto_minus_adj": 0.06,
+    "confusion": [
+      [
+        14,
+        11,
+        5,
+        1
+      ],
+      [
+        24,
+        23,
+        22,
+        15
+      ],
+      [
+        10,
+        12,
+        8,
+        21
+      ],
+      [
+        2,
+        4,
+        15,
+        13
+      ]
+    ]
+  },
+  "influence_channelA_only": {
+    "metric": "influence vs channel A",
+    "n": 200,
+    "exact_agreement": 0.31,
+    "exact_ci95": [
+      0.25,
+      0.3772
+    ],
+    "within_one_level": 0.855,
+    "quadratic_weighted_kappa": 0.3922,
+    "kappa_ci95": [
+      0.2964,
+      0.4836
+    ],
+    "mean_signed_error_auto_minus_adj": 0.325,
+    "confusion": [
+      [
+        14,
+        20,
+        10,
+        0
+      ],
+      [
+        11,
+        27,
+        20,
+        9
+      ],
+      [
+        8,
+        15,
+        21,
+        38
+      ],
+      [
+        0,
+        2,
+        5,
+        0
+      ]
+    ]
+  },
+  "influence_channelB_only": {
+    "metric": "influence vs channel B",
+    "n": 200,
+    "exact_agreement": 0.245,
+    "exact_ci95": [
+      0.1906,
+      0.309
+    ],
+    "within_one_level": 0.665,
+    "quadratic_weighted_kappa": 0.0571,
+    "kappa_ci95": [
+      0.0023,
+      0.1189
+    ],
+    "mean_signed_error_auto_minus_adj": -1.04,
+    "confusion": [
+      [
+        37,
+        7,
+        0,
+        0
+      ],
+      [
+        58,
+        9,
+        0,
+        0
+      ],
+      [
+        61,
+        17,
+        3,
+        1
+      ],
+      [
+        6,
+        0,
+        1,
+        0
+      ]
+    ]
+  },
+  "consequence_channelA_only": {
+    "metric": "consequence vs channel A",
+    "n": 200,
+    "exact_agreement": 0.3,
+    "exact_ci95": [
+      0.2407,
+      0.3668
+    ],
+    "within_one_level": 0.825,
+    "quadratic_weighted_kappa": 0.2337,
+    "kappa_ci95": [
+      0.1082,
+      0.3536
+    ],
+    "mean_signed_error_auto_minus_adj": -0.39,
+    "confusion": [
+      [
+        6,
+        5,
+        0,
+        0
+      ],
+      [
+        11,
+        14,
+        24,
+        5
+      ],
+      [
+        14,
+        33,
+        28,
+        12
+      ],
+      [
+        5,
+        11,
+        20,
+        12
+      ]
+    ]
+  },
+  "consequence_channelB_only": {
+    "metric": "consequence vs channel B",
+    "n": 200,
+    "exact_agreement": 0.1,
+    "exact_ci95": [
+      0.0657,
+      0.1494
+    ],
+    "within_one_level": 0.415,
+    "quadratic_weighted_kappa": 0.0532,
+    "kappa_ci95": [
+      0.0211,
+      0.0865
+    ],
+    "mean_signed_error_auto_minus_adj": -1.615,
+    "confusion": [
+      [
+        11,
+        0,
+        0,
+        0
+      ],
+      [
+        44,
+        9,
+        1,
+        0
+      ],
+      [
+        72,
+        15,
+        0,
+        0
+      ],
+      [
+        28,
+        17,
+        3,
+        0
+      ]
+    ]
+  },
+  "adjudicated_tier_distribution": {
+    "low": 31,
+    "moderate": 84,
+    "high": 51,
+    "very_high": 34
+  },
+  "automated_tier_distribution_in_sample": {
+    "low": 50,
+    "moderate": 50,
+    "high": 50,
+    "very_high": 50
+  },
+  "prespecified_criterion": "quadratic weighted kappa >= 0.60 on both axes",
+  "SUPPORTED": false,
+  "H1_replication_on_adjudicated_tiers": {
+    "spearman_rho": 0.1442,
+    "p": 0.04170392685938042,
+    "mean_E_norm_by_adjudicated_tier": {
+      "low": 0.1613,
+      "moderate": 0.1611,
+      "high": 0.1817,
+      "very_high": 0.1941
+    },
+    "n_by_adjudicated_tier": {
+      "low": 31,
+      "moderate": 84,
+      "high": 51,
+      "very_high": 34
+    }
+  }
+}
