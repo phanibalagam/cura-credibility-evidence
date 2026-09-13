@@ -17,8 +17,8 @@ record was altered, and no value in the registry was corrected or imputed.
 
 ## What is in this repository
 
-- `data/processed/adjudication_labels.csv` — 3,931 B — the author's 200 adjudication labels
-  (`idx`, `nct_id`, `adj_influence`, `adj_consequence`). Author-generated; no registry text.
+- `data/processed/adjudication_labels.csv` — 3,931 B — the 200 adjudication labels
+  (`idx`, `nct_id`, `adj_influence`, `adj_consequence`). Produced by the study's automated annotator, not by a human expert; see Known limitations. No registry text.
 - `data/processed/adjudication_key.csv` — 9,283 B — the corresponding automated scores for the
   same 200 studies (`nct_id`, `tier`, `influence`, `consequence`, channel scores, `E_norm`).
   Derived; no registry text.
